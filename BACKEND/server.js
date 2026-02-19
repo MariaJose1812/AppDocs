@@ -1,9 +1,11 @@
 require ('dotenv').config();
 const express = require ('express');
 const db = require('./config/db');
+const actasRoutes = require('./routes/actasRoutes');
 const app = express();
 
 app.use(express.json());
+app.use('/api/actas', actasRoutes);
 
 
 // RUTA DE PRUEBA
